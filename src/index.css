@@ -1,0 +1,148 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --blood: #650814;
+  --burgundy: #3d050c;
+  --romantic: #a91527;
+  --cream: #f8ebd8;
+  --paper: #fff7ea;
+  --ink: #351a17;
+  --blush: #d98b91;
+  --gold: #d6a84f;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  background: var(--burgundy);
+  color: var(--ink);
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* subtle paper grain, layered as a repeating svg noise texture */
+.grain {
+  position: relative;
+}
+.grain::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.09;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* torn / deckled paper edge, applied to letter paper elements */
+.paper-edge {
+  position: relative;
+  background: var(--paper);
+  clip-path: polygon(
+    0.5% 2%, 3% 0%, 8% 1.2%, 14% 0.2%, 21% 1%, 28% 0%, 35% 1.4%, 43% 0.3%,
+    51% 1.1%, 59% 0%, 67% 1.3%, 75% 0.2%, 83% 1%, 91% 0%, 97% 1.4%, 100% 3%,
+    99.2% 12%, 100% 22%, 99% 33%, 100% 44%, 99.3% 55%, 100% 66%, 99% 77%,
+    100% 88%, 99.4% 97%, 96% 99.4%, 89% 98.2%, 82% 100%, 74% 98.8%, 66% 100%,
+    58% 98.6%, 50% 100%, 42% 98.7%, 34% 100%, 26% 98.9%, 18% 100%, 10% 98.4%,
+    3% 100%, 0.6% 97%, 1.4% 88%, 0% 77%, 1.1% 66%, 0% 55%, 1.3% 44%, 0% 33%,
+    1% 22%, 0% 12%
+  );
+}
+
+.envelope-flap {
+  clip-path: polygon(0 0, 50% 46%, 100% 0);
+}
+
+/* wax seal glossy highlight */
+.wax-seal {
+  background: radial-gradient(circle at 32% 28%, #d3465a 0%, var(--romantic) 40%, var(--blood) 78%, var(--burgundy) 100%);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.45), inset 0 2px 3px rgba(255, 255, 255, 0.25), inset 0 -4px 6px rgba(0, 0, 0, 0.35);
+}
+
+.ink-underline {
+  background-image: linear-gradient(transparent 78%, rgba(169, 21, 39, 0.28) 0%);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.stamp-notch {
+  -webkit-mask-image: radial-gradient(circle 3.2px at 0 0, transparent 98%, #000 100%),
+    radial-gradient(circle 3.2px at 100% 0, transparent 98%, #000 100%);
+  mask-image: radial-gradient(circle 3.2px at 0 0, transparent 98%, #000 100%),
+    radial-gradient(circle 3.2px at 100% 0, transparent 98%, #000 100%);
+}
+
+/* realistic handmade-paper envelope surface: soft fiber blotches + tone variation */
+.paper-fiber {
+  background-image: radial-gradient(ellipse 90px 40px at 12% 18%, rgba(101, 8, 20, 0.05), transparent 62%),
+    radial-gradient(ellipse 120px 55px at 85% 74%, rgba(101, 8, 20, 0.045), transparent 65%),
+    radial-gradient(ellipse 60px 100px at 62% 10%, rgba(214, 168, 79, 0.07), transparent 60%),
+    radial-gradient(ellipse 90px 50px at 25% 90%, rgba(53, 26, 23, 0.05), transparent 62%),
+    radial-gradient(ellipse 70px 70px at 92% 20%, rgba(169, 21, 39, 0.04), transparent 60%),
+    radial-gradient(circle at 50% 50%, rgba(53, 26, 23, 0.02), rgba(53, 26, 23, 0.06));
+}
+
+/* faint fold-crease lines that make it read as an actual folded envelope */
+.envelope-creases {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+/* slightly irregular, hand-cut paper edge instead of a perfect machine rectangle */
+.envelope-deckle {
+  clip-path: polygon(
+    0% 1.2%, 2% 0%, 97% 0.4%, 100% 1.6%,
+    99.3% 30%, 100% 55%, 99.4% 78%, 100% 98%,
+    97.5% 100%, 60% 99.2%, 40% 100%, 3% 99.3%,
+    0.4% 96%, 1% 65%, 0% 40%, 0.6% 15%
+  );
+}
+
+/* organic, hand-pressed wax blob instead of a perfect circle */
+.wax-blob {
+  border-radius: 42% 58% 53% 47% / 41% 44% 56% 59%;
+}
+.wax-drip {
+  border-radius: 50% 50% 60% 40% / 55% 55% 45% 45%;
+}
+
+::selection {
+  background: var(--blush);
+  color: var(--burgundy);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--burgundy);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--romantic);
+  border-radius: 8px;
+}
