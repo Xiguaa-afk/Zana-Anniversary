@@ -88,12 +88,12 @@ export const birthdayData: BirthdayData = {
   },
 
   memories: [
-    { image: 'public/images/p1.jpg', caption: 'Our 1st valentine' },
-    { image: 'public/images/p2.jpg', caption: "The day you took me to a fancy place for dinner" },
-    { image: 'public/images/p3.jpg', caption: 'Us at our favourite cafe' },
-    { image: 'public/images/p4.jpg', caption: "Our love for photobooth" },
-    { image: 'public/images/p5.jpg', caption: "You would always kiss my head for mirror pics" },
-    { image: 'public/images/p6.jpg', caption: "Our daily emart visit" },
+    { image: '/images/p1.jpg', caption: 'Our 1st valentine' },
+    { image: '/images/p2.jpg', caption: "The day you took me to a fancy place for dinner" },
+    { image: '/images/p3.jpg', caption: 'Us at our favourite cafe' },
+    { image: '/images/p4.jpg', caption: "Our love for photobooth" },
+    { image: '/images/p5.jpg', caption: "You would always kiss my head for mirror pics" },
+    { image: '/images/p6.jpg', caption: "Our daily emart visit" },
   ],
 
   letter4: {
