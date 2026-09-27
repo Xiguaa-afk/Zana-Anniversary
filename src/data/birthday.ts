@@ -106,6 +106,6 @@ export const birthdayData: BirthdayData = {
 
 
   music: {
-    src: 'public/music/Daniel Caesar - Best Part (Audio) ft. H.E.R.mp3',
+    src: '/music/Daniel Caesar - Best Part (Audio) ft. H.E.R.mp3',
   },
 }
