@@ -44,103 +44,68 @@ export interface BirthdayData {
     closingLine: string
   }
 
-  letter5: {
-    cakeHeading: string
-    body: string[]
-    signatureName: string
-  }
-
-  finalSurprise: {
-    psLine: string
-    buttonLabel: string
-    subline: string
-    closingLine: string
-  }
-
-  giftMessage?: string
-
   music: {
     src: string
   }
 }
 
 export const birthdayData: BirthdayData = {
-  boyfriendName: 'Keanghong',
-  yourName: 'Malina',
+  boyfriendName: 'CHEUMINH',
+  yourName: 'ZANA',
 
   landing: {
-    heading: 'HAPPY BIRTHDAY, MY LOVE',
+    heading: 'HAPPY ANNIVERSARY, MY LOVE',
     subheading: 'You have some very important mail ♡',
-    envelopeToLine: 'My Baby Hongiee ♡',
-    envelopeFromLine: 'Someone who is very special to you',
+    envelopeToLine: 'My Cheuminh ♡',
+    envelopeFromLine: 'Your one and only baby',
     buttonLabel: 'Open your mail',
   },
 
   letter1: {
     label: 'Open me first ♡',
     body: [
-      'Happy Birthday, baby. ♡',
-      "I made this little place just for you because an ordinary birthday message didn't feel special enough.",
-      'So... I have a few things I want to tell you.',
-      'Take your time reading them, okay?',
+      'Happy 1 year anniversary, my love 🤍 it’s been 12 months of growing together, learning each other’s hearts, and choosing each other through every up and down. you’ve been my light, my comfort, and my reason to smile even on the hardest days. every moment with you feels like home, safe, real, and full of love. thank you for being patient with me, for loving me even when i struggle to love myself. you’re not just someone i’m in love with, you’re the one i want to spend forever with. even on the hardest days of my life i would still want you to be my bf, i love you so much my minhminh',
     ],
-    signatureName: 'Malina',
+    signatureName: 'Zana',
   },
 
   letter2: {
-    title: 'Things I Love About You',
+    title: '12 Things I Love About You',
     items: [
-      'Your stupid smile.',
-      'The way you talk about school and studies.',
-      'The little things you do without realizing.',
-      'How innocent you are as person.',
-      'How you somehow make ordinary days feel special.',
+      'Your smile',
+      'Your laugh',
+      'Your eyes',
+      'Your kisses',
+      'Your efforts',
+      'Your patience with me',
+      'Your strength',
+      'Your loyalty',
+      'Your hugs',
+      'The way you protect me',
+      'The way you belive in me',
+      'How loved you make me feel',
     ],
   },
 
   memories: [
-    { image: '/images/p1.jpg', caption: 'We tried to look our best for each other' },
-    { image: '/images/p2.jpg', caption: "You look so cute here" },
-    { image: '/images/p3.jpg', caption: 'When we first started talking' },
-    { image: '/images/p4.jpg', caption: "My first dump of u on insta" },
+    { image: 'public/images/p1.jpg', caption: 'Our 1st valentine' },
+    { image: 'public/images/p2.jpg', caption: "The day you took me to a fancy place for dinner" },
+    { image: 'public/images/p3.jpg', caption: 'Us at our favourite cafe' },
+    { image: 'public/images/p4.jpg', caption: "Our love for photobooth" },
+    { image: 'public/images/p5.jpg', caption: "You would always kiss my head for mirror pics" },
+    { image: 'public/images/p6.jpg', caption: "Our daily emart visit" },
   ],
 
   letter4: {
-    label: "Open when you're ready ♡",
+    label: "Open me when you are sad ♡",
     body: [
-      "I don't know exactly when it happened.",
-      'But somewhere along the way, you became my favorite person to talk to, my favorite person to annoy, my favorite person to miss...',
-      'and my favorite person to love.',
-      "I'm really, really lucky to have you.",
-    ],
-    closingLine: 'I love you. ♡',
+      "sad again? what a baby 🥺 you do know i cant help but get mad at everything right? you know what’s funny, the only reason why i turned out like this was because of you. i keep loving you more and more everyday then i become sensitive so please understand and don’t be harsh on my little heart 😔 i hope you know that i love you more everyday and i miss you so so so so much and i cant wait for us to have a future together.",
+      ],
+    closingLine: "xoxo your only baby zana 💋",
   },
 
-  letter5: {
-    cakeHeading: 'HAPPY BIRTHDAY, MY LOVE',
-    body: [
-      'My birthday wish for you ♡',
-      "I hope this year brings you everything you've been working toward.",
-      'I hope you have more reasons to smile, more moments you\u2019re proud of, and more days where you feel loved.',
-      'And selfishly...',
-      'I hope I get to be beside you for as many of them as possible.',
-      'Happy birthday, my love.',
-      'Thank you for being you.',
-      'I love you. ♡',
-    ],
-    signatureName: 'Linaaa',
-  },
-
-  finalSurprise: {
-    psLine: "P.S. There's one more thing...",
-    buttonLabel: 'One last surprise ♡',
-    subline: 'I hope you liked your little mailbox.',
-    closingLine: 'Your real life gift is coming soon😼',
-  },
-
-  giftMessage: 'I love you',
 
   music: {
-    src: '/music/The 1975 - About You (Official).mp3',
+    src: 'public/music/Daniel Caesar - Best Part (Audio) ft. H.E.R.mp3',
   },
 }

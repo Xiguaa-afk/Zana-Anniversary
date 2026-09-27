@@ -17,7 +17,7 @@ function CloseButton({ onClose, label = 'Back to the mailbox' }: { onClose: () =
 
 export function Letter1({ data, onClose }: { data: BirthdayData; onClose: () => void }) {
   return (
-    <LetterPaper rotate={-1}>
+    <LetterPaper rotate={-1} bgColor="var(--envelope-cream)">
       <div className="text-center space-y-4">
         {data.letter1.body.map((line, i) => (
           <motion.p
@@ -47,7 +47,7 @@ export function Letter1({ data, onClose }: { data: BirthdayData; onClose: () => 
 
 export function Letter2({ data, onClose }: { data: BirthdayData; onClose: () => void }) {
   return (
-    <LetterPaper rotate={0.8}>
+    <LetterPaper rotate={0.8} bgColor="var(--envelope-cream)">
       <h3 className="text-center font-display italic text-3xl sm:text-4xl text-blood mb-6">
         {data.letter2.title}
       </h3>
@@ -76,7 +76,7 @@ export function Letter2({ data, onClose }: { data: BirthdayData; onClose: () => 
 export function Letter3({ data, onClose }: { data: BirthdayData; onClose: () => void }) {
   const rotations = [-3, 2, -2, 3, -1]
   return (
-    <LetterPaper rotate={-0.4} className="max-w-2xl">
+    <LetterPaper rotate={-0.4} className="max-w-2xl" bgColor="var(--bg-bottom)">
       <h3 className="text-center font-display italic text-3xl sm:text-4xl text-blood mb-8">Our Memories</h3>
       <div className="flex flex-wrap justify-center gap-6">
         {data.memories.map((m, i) => (
@@ -90,7 +90,7 @@ export function Letter3({ data, onClose }: { data: BirthdayData; onClose: () => 
 
 export function Letter4({ data, onClose }: { data: BirthdayData; onClose: () => void }) {
   return (
-    <LetterPaper rotate={0.3} dark>
+    <LetterPaper rotate={0.3} bgColor="var(--envelope-cream)">
       <div className="text-center space-y-4">
         {data.letter4.body.map((line, i) => (
           <motion.p
@@ -121,7 +121,7 @@ export function Letter5({ data, onClose }: { data: BirthdayData; onClose: () => 
   return (
     <LetterPaper rotate={-0.5} className="max-w-xl">
       <div className="text-center space-y-4">
-        {data.letter5.body.map((line, i) => (
+        {data.letter4.body.map((line, i) => (
           <motion.p
             key={i}
             initial={{ opacity: 0, y: 10 }}
@@ -132,14 +132,6 @@ export function Letter5({ data, onClose }: { data: BirthdayData; onClose: () => 
             {line}
           </motion.p>
         ))}
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.2 + data.letter5.body.length * 0.32 + 0.3 }}
-          className="font-hand text-xl text-blood pt-4"
-        >
-          Forever yours,<br />{data.letter5.signatureName}
-        </motion.p>
       </div>
       <CloseButton onClose={onClose} label="Close" />
     </LetterPaper>

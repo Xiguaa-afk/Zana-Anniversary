@@ -61,7 +61,7 @@ export default function LetterModal({ label, toLine, fromLine, sealTone, onClose
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-8"
-      style={{ background: 'rgba(42, 3, 8, 0.72)', backdropFilter: 'blur(6px)' }}
+      style={{ background: '#e2eff6', backdropFilter: 'blur(6px)' }}
     >
       <button
         type="button"

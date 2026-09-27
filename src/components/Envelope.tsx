@@ -58,8 +58,8 @@ function WaxSeal({
 }) {
   const base =
     tone === 'blood'
-      ? 'radial-gradient(circle at 30% 26%, #c23c4d 0%, #650814 42%, #3D050C 92%)'
-      : 'radial-gradient(circle at 32% 28%, #d3465a 0%, #A91527 40%, #650814 78%, #3D050C 100%)'
+      ? 'radial-gradient(circle at 30% 26%, #d0e3f0 0%, #b7d7ea 42%, #a9c9db 92%)'
+      : 'radial-gradient(circle at 32% 28%, #e2eff6 0%, #a9c9db 40%, #b7d7ea 78%, #a9c9db 100%)'
   return (
     <div className="relative" style={{ width: size, height: size, transform: `rotate(${rotate}deg)` }}>
       {/* small drip beneath the seal, for a hand-pressed feel */}
@@ -68,7 +68,7 @@ function WaxSeal({
         style={{
           width: size * 0.32,
           height: size * 0.22,
-          background: tone === 'blood' ? '#4d0810' : '#7a0d1c',
+          background: tone === 'blood' ? '#a9c9db' : '#b7d7ea',
           opacity: 0.85,
         }}
       />
@@ -112,7 +112,7 @@ export default function Envelope(props: Props) {
           background: opened
             ? 'linear-gradient(155deg, #eee0c5, #ddc99f)'
             : 'linear-gradient(155deg, #fdf6e6, #f2e0bd)',
-          boxShadow: '0 10px 18px rgba(61,5,12,0.35), 0 2px 4px rgba(61,5,12,0.25)',
+          boxShadow: '0 10px 18px rgba(183,215,234,0.35), 0 2px 4px rgba(183,215,234,0.25)',
         }}
       >
         <div className="paper-fiber absolute inset-0 overflow-hidden" />
@@ -170,7 +170,7 @@ export default function Envelope(props: Props) {
         className="envelope-deckle relative w-full aspect-[3/2]"
         style={{
           background: 'linear-gradient(155deg, #fdf6e6, #f0deb9)',
-          boxShadow: '0 18px 34px rgba(61,5,12,0.5), 0 4px 10px rgba(61,5,12,0.35)',
+          boxShadow: '0 18px 34px rgba(183,215,234,0.5), 0 4px 10px rgba(183,215,234,0.35)',
         }}
       >
         <div className="paper-fiber absolute inset-0 overflow-hidden" />
